@@ -1,0 +1,214 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* App container */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  .light-mode {
+    background-color: #f5f5f5;
+    color: #121212;
+  }
+  
+  /* App header */
+  .app-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .plan-route-button {
+    background-color: white;
+    color: #0066cc;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .mark-read-button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  /* Bottom navigation */
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem 0;
+    border-top: 1px solid;
+  }
+  
+  .bottom-nav.light {
+    background-color: white;
+    border-color: #e5e5e5;
+  }
+  
+  .bottom-nav.dark {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-item.active {
+    color: #0066cc;
+  }
+  
+  .nav-item:not(.active) {
+    color: #666;
+  }
+  
+  .nav-label {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Map styles */
+  .map-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .map-display {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .map-display.light {
+    background-color: #e5e5e5;
+  }
+  
+  .map-display.dark {
+    background-color: #1e1e1e;
+  }
+  
+  .map-content {
+    text-align: center;
+  }
+  
+  .map-visualization {
+    width: 100%;
+    height: 16rem;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .transit-lines {
+    position: absolute;
+    inset: 0;
+    background-color: #d1e9ff;
+    border-radius: 0.5rem;
+  }
+  
+  .transit-line {
+    position: absolute;
+    height: 2px;
+  }
+  
+  .transit-line.metrorail {
+    top: 50%;
+    left: 0;
+    right: 0;
+    background-color: #ff3b30;
+  }
+  
+  .transit-line.bus {
+    top: 25%;
+    left: 2.5rem;
+    right: 2.5rem;
+    background-color: #007aff;
+  }
+  
+  .transit-line.mover {
+    bottom: 25%;
+    left: 5rem;
+    right: 5rem;
+    background-color: #34c759;
+  }
+  
+  .vehicle-marker {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .metrorail-marker {
+    background-color: #ff3b30;
+  }
+  
+  .bus-marker {
+    background-color: #007aff;
+  }
+  
+  .mover-marker {
+    background-color: #34c759;
+  }
+  
+  .map-description {
+    font-size: 0.875rem;
+  }
+  
+  .nearby-transit {
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nearby-transit h3 {
+    font-weight: bold;
+    color: #0066cc;
